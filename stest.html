@@ -7,7 +7,7 @@
 	<title>Document</title>
 	<style>
 		#d-day {
-			color: #ffffff;
+			color: #ffff00;
 			font-family: 'Lato', sans-serif;
 			font-size: .7em;
 			text-align: center;
@@ -81,11 +81,13 @@
 		let anniv = today - annivDiff;
 
 		//birthday
-		if(today - birthDiff != 0) {
-			let birth = today - birthDiff;	
+		let birth = today - birthDiff;
+		if(today - birthDiff == 0) {
+			birth = 'D-Day';
+			return birth;
 		}
 		else{
-			let birth = "D-DAY";
+			return birth;
 		}
 
 		// display
