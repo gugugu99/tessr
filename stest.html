@@ -35,19 +35,19 @@
 <body>
 	<div id="widget">
 		<div class="d-day"> 
-			<div id="days" class="numbers "> </div>
+			<div id="debut" class="numbers "> </div>
 			debut
 		</div> 
 		<div class="d-day"> 
-			<div id="hours" class="numbers"> </div>
+			<div id="pienna" class="numbers"> </div>
 			pienna
 		</div> 
 		<div class="d-day"> 
-			<div id="minutes" class="numbers"> </div>
+			<div id="anniv" class="numbers"> </div>
 			anniversary
 		</div> 
 		<div class="d-day"> 
-			<div id="seconds" class="numbers"> </div>
+			<div id="birth" class="numbers"> </div>
 			birthday
 		</div>
 	</div>
@@ -67,16 +67,16 @@
 		const diff = myDate - today;
 
 		// math
-		let days = Math.floor(diff / (1000 * 60 * 60 * 24));
-		let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-		let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+		let debut = Math.floor(diff / (1000 * 60 * 60 * 24));
+		let pienna = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		let anniv = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
 		let seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
 		// display
-		document.getElementById("days").innerHTML=days
-		document.getElementById("hours").innerHTML=hours
-		document.getElementById("minutes").innerHTML=minutes
-		document.getElementById("seconds").innerHTML=seconds
+		document.getElementById("debut").innerHTML=debut
+		document.getElementById("pienna").innerHTML=pienna
+		document.getElementById("anniv").innerHTML=anniv
+		document.getElementById("birth").innerHTML=birth
 	}, 1);
 </script>
 </html>
