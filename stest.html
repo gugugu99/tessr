@@ -55,7 +55,7 @@
     
 <script>
 	//Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec
-	const debutDate = new Date('Jun 11, 2023 00:00:00'); //16:00:00
+	const debutDate = new Date('Nov 14, 2024 00:00:00'); //16:00:00
 	const piennaDate = new Date('Jan 29, 2024 00:00:00'); //21:00:00
 	const annivDate = new Date('Nov 13, 2024 00:00:00');
 	const birthDate = new Date('Nov 15, 2024 00:00:00');
@@ -77,12 +77,18 @@
 		if(debutIf > 0) {
 			debut = 'D+' + debutIf;
 		}
+		else if(debutIf == 0) {
+			debut = 'D-day';
+		}
 
 		//pienna
 		let piennaIf = today - piennaDiff;
 		let pienna = 'D' + piennaIf;
 		if(piennaIf > 0) {
 			pienna = 'D+' + piennaIf;
+		}
+		else if(piennaIf == 0) {
+			pienna = 'D-day';
 		}
 
 		//anniversary
