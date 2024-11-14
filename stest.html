@@ -56,10 +56,10 @@
 <script>
 	const days = 1000 * 60 * 60 * 24;
 	//Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec
-	const debutDate = new Date('Jun 11, 2023 00:00:01'); //16:00:00
-	const piennaDate = new Date('Jan 29, 2024 00:00:01'); //21:00:00
-	const annivDate = new Date('Jun 11, 2005 00:00:01');
-	const birthDate = new Date('Oct 01, 2025 00:00:01');
+	const debutDate = new Date('Jun 11, 2023 00:00:00'); //16:00:00
+	const piennaDate = new Date('Jan 29, 2024 00:00:00'); //21:00:00
+	const annivDate = new Date('Jun 11, 2005 00:00:00');
+	const birthDate = new Date('Nov 15, 2024 00:00:00');
 
 	// countdown
 	let dDay = setInterval(function() {
@@ -67,10 +67,10 @@
 		const today = new Date().getTime();
 
 		// get the difference
-		const debutDiff = today - debutDate + days;
-		const piennaDiff = today - piennaDate + days;
-		const annivDiff = today - annivDate + days;
-		const birthDiff = today - birthDate + days;
+		const debutDiff = today - debutDate;
+		const piennaDiff = today - piennaDate;
+		const annivDiff = today - annivDate;
+		const birthDiff = today - birthDate;
 
 		// math
 		let debutIf = Math.floor(debutDiff / days);
