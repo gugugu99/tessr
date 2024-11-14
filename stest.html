@@ -7,7 +7,7 @@
 	<title>Document</title>
 	<style>
 		#d-day {
-			color: #ffff00;
+			color: #ffffff;
 			font-family: 'Lato', sans-serif;
 			font-size: .7em;
 			text-align: center;
@@ -78,11 +78,17 @@
 		let pienna = today - piennaDiff;
 
 		//anniversary
-		let anniv = today - annivDiff;
+		let annivIf = today - annivDiff;
+		if(annivIf != 0) {
+			let anniv = today - annivDiff;
+		}
+		else {
+			anniv = "D-day"
+		}
 
 		//birthday
-		let a = today - birthDiff;
-		if(a != 0) {
+		let birthIf = today - birthDiff;
+		if(birthIf != 0) {
 			let birth = today - birthDiff;
 		}
 		else {
