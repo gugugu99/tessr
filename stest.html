@@ -9,7 +9,7 @@
 		#d-day {
 			color: #ffff00;
 			font-family: 'Lato', sans-serif;
-			font-size: .7em;
+			font-size: .6em;
 			text-align: center;
 			text-transform: uppercase;
 			letter-spacing: 5px;
@@ -26,7 +26,7 @@
 
 		.numbers {
 			font-family: 'Montserrat', sans-serif;
-			font-size: 3em;
+			font-size: 2.8em;
 			text-align: center;
 		}
 	</style>
@@ -54,13 +54,13 @@
 </body>
 
 <script>
-	const days = 1000 * 60 * 60 * 24;
 	//Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec
 	const debutDate = new Date('Jun 11, 2023 00:00:00'); //16:00:00
-	const piennaDate = new Date('Jan 29, 2024 00:00:00'); //21:00:00
-	const annivDate = new Date('Jun 11, 2005 00:00:00');
-	const birthDate = new Date('Nov 15, 2024 00:00:00');
+	const piennaDate = new Date('Jan 29, 2024 00:00:00');
+	const annivDate = new Date('Jun 11, 2025 00:00:00');
+	const birthDate = new Date('Oct 01, 2025 00:00:00');
 
+	const days = 1000 * 60 * 60 * 24;
 	// countdown
 	let dDay = setInterval(function() {
 		// get today's date
@@ -78,7 +78,7 @@
 		let annivIf = Math.floor(annivDiff / days);
 		let birthIf = Math.floor(birthDiff / days);
 
-		//debut
+		// debut
 		let debut = 'D' + debutIf;
 		if(debutIf > 0) {
 			debut = 'D+' + debutIf;
@@ -86,7 +86,7 @@
 		else if(debutIf == 0) {
 			debut = 'D-day';
 		}
-		//pienna
+		// pienna
 		let pienna = 'D' + piennaIf;
 		if(piennaIf > 0) {
 			pienna = 'D+' + piennaIf;
@@ -94,7 +94,7 @@
 		else if(piennaIf == 0) {
 			pienna = 'D-day';
 		}
-		//anniversary
+		// anniversary
 		let anniv = 'D' + annivIf;
 		if(annivIf > 0) {
 			anniv = 'D+' + annivIf;
@@ -102,7 +102,7 @@
 		else if(annivIf == 0) {
 			anniv = 'D-day';
 		}
-		//birthday
+		// birthday
 		let birth = 'D' + birthIf;
 		if(birthIf > 0) {
 			birth = 'D+' + birthIf;
