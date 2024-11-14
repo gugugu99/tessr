@@ -6,19 +6,19 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:900">
 	<title>Document</title>
 	<style>
-		#dday {
+		#widget {
 			color: #ffffff;
+			font-family: 'Lato', sans-serif;
+			font-size: .7em;
 			text-align: center;
 			text-transform: uppercase;
-			font-family: 'Lato', sans-serif;
-			font-size: 0.7em;
 			letter-spacing: 5px;
 		}
 
-		.days, .hours, .minutes, .seconds {
+		.d-day {
 			display: inline-block;
 			width: 150px;
-			margin-bottom: 8px;
+			margin-bottom: 7px;
 			padding: 20px;
 			border-radius: 5px;
 			background: #971b2f;
@@ -33,20 +33,20 @@
 </head>
 
 <body>
-	<div id="dday">
-		<div class="days"> 
+	<div id="widget">
+		<div class="d-day"> 
 			<div id="days" class="numbers "> </div>
 			debut
 		</div> 
-		<div class="hours"> 
+		<div class="d-day"> 
 			<div id="hours" class="numbers"> </div>
 			pienna
 		</div> 
-		<div class="minutes"> 
+		<div class="d-day"> 
 			<div id="minutes" class="numbers"> </div>
 			anniversary
 		</div> 
-		<div class="seconds"> 
+		<div class="d-day"> 
 			<div id="seconds" class="numbers"> </div>
 			birthday
 		</div>
@@ -54,30 +54,29 @@
 </body>
     
 <script>
-    //const year = new Date().getFullYear();
-    const myDate = new Date('Dec 25, 2024 00:00:00');
-    //console.log(myDate);
+	//const year = new Date().getFullYear();
+	const myDate = new Date('Dec 25, 2024 00:00:00');
+	//console.log(myDate);
 
-// countdown
-let timer = setInterval(function() {
+	// countdown
+	let timer = setInterval(function() {
+		// get today's date
+		const today = new Date().getTime();
 
-  // get today's date
-  const today = new Date().getTime();
+		// get the difference
+		const diff = myDate - today;
 
-  // get the difference
-  const diff = myDate - today;
+		// math
+		let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+		let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+		let seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-  // math
-  let days = Math.floor(diff / (1000 * 60 * 60 * 24));
-  let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-  let seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-  // display
-  document.getElementById("days").innerHTML=days
-  document.getElementById("hours").innerHTML=hours
-  document.getElementById("minutes").innerHTML=minutes
-  document.getElementById("seconds").innerHTML=seconds
-}, 1);
+		// display
+		document.getElementById("days").innerHTML=days
+		document.getElementById("hours").innerHTML=hours
+		document.getElementById("minutes").innerHTML=minutes
+		document.getElementById("seconds").innerHTML=seconds
+	}, 1);
 </script>
 </html>
