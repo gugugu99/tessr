@@ -54,18 +54,20 @@
 </body>
     
 <script>
-	//const year = new Date().getFullYear();
-	const myDate = new Date('Dec 25, 2024 00:00:00');
-	//console.log(myDate);
-
+	//Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec
+	const debutDate = new Date('Jun 11, 2023 16:00:00');
+	const piennaDate = new Date('Jan 29, 2024 21:00:00');
+	const annivDate = new Date('Jun 11, 2025 00:00:00');
+	const birthDate = new Date('Oct 01, 2025 00:00:00');
+	
 	// countdown
 	let timer = setInterval(function() {
 		// get today's date
 		const today = new Date().getTime();
 
 		// get the difference
-		const diff = myDate - today;
-
+		const diff = debutDate - today;
+		
 		// math
 		let debut = Math.floor(diff / (1000 * 60 * 60 * 24));
 		let pienna = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
