@@ -63,24 +63,24 @@
 	// countdown
 	let dDay = setInterval(function() {
 		// get today's date
-		const now = new Date().getTime();
-		let today = Math.floor(now / (1000 * 60 * 60 * 24));
+		const today = new Date().getTime();
+		let todayTime = Math.floor(now % (1000 * 60 * 60 * 24));
 
 		//debut
-		let debutDiff = Math.floor(debutDate / (1000 * 60 * 60 * 24));
-		let debut = -(debutDiff - today);
+		let debutDiff = Math.floor((debutDate / (1000 * 60 * 60 * 24)) + todayTime);
+		let debut = today - debutDiff;
 
 		//pienna
-		let piennaDiff = Math.floor(piennaDate / (1000 * 60 * 60 * 24));
-		let pienna = -(piennaDiff - today);
+		let piennaDiff = Math.floor((piennaDate / (1000 * 60 * 60 * 24)) + todayTime);
+		let pienna = today - piennaDiff;
 
 		//anniversary
-		let annivDiff = Math.floor(annivDate / (1000 * 60 * 60 * 24));
-		let anniv = -(annivDiff - today);
+		let annivDiff = Math.floor((annivDate / (1000 * 60 * 60 * 24)) + todayTime);
+		let anniv = today - annivDiff;
 
 		//birthday
-		let birthDiff = Math.floor(birthDate / (1000 * 60 * 60 * 24));
-		let birth = -(birthDiff - today);
+		let birthDiff = Math.floor((birthDate / (1000 * 60 * 60 * 24)) + todayTime);
+		let birth = today - birthDiff;
 
 		// display
 		document.getElementById("debut").innerHTML=debut;
