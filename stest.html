@@ -64,22 +64,21 @@
 	let dDay = setInterval(function() {
 		// get today's date
 		const today = new Date().getTime();
-		let todayTime = Math.floor(today % (1000 * 60 * 60 * 24));
 
 		//debut
-		let debutDiff = Math.floor((debutDate / (1000 * 60 * 60 * 24)) + todayTime);
+		let debutDiff = Math.floor(debutDate / (1000 * 60 * 60 * 24));
 		let debut = today - debutDiff;
 
 		//pienna
-		let piennaDiff = Math.floor((piennaDate / (1000 * 60 * 60 * 24)) + todayTime);
+		let piennaDiff = Math.floor(piennaDate / (1000 * 60 * 60 * 24));
 		let pienna = today - piennaDiff;
 
 		//anniversary
-		let annivDiff = Math.floor((annivDate / (1000 * 60 * 60 * 24)) + todayTime);
+		let annivDiff = Math.floor(annivDate / (1000 * 60 * 60 * 24));
 		let anniv = today - annivDiff;
 
 		//birthday
-		let birthDiff = Math.floor((birthDate / (1000 * 60 * 60 * 24)) + todayTime);
+		let birthDiff = Math.floor(birthDate / (1000 * 60 * 60 * 24));
 		let birth = today - birthDiff;
 
 		// display
