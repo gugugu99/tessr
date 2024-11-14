@@ -61,18 +61,26 @@
 	const birthDate = new Date('Oct 01, 2025 00:00:00');
 	
 	// countdown
-	let timer = setInterval(function() {
+	let dDay = setInterval(function() {
 		// get today's date
-		const today = new Date().getTime();
+		const now = new Date().getTime();
+		let today = Math.floor(now / (1000 * 60 * 60 * 24));
 
-		// get the difference
-		const diff = debutDate - today;
-		
-		// math
-		let debut = Math.floor(diff / (1000 * 60 * 60 * 24));
-		let pienna = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-		let anniv = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-		let birth = Math.floor((diff % (1000 * 60)) / 1000);
+		//debut
+		let debutDiff = Math.floor(debutDate / (1000 * 60 * 60 * 24));
+		let debut = debutDiff - today;
+
+		//pienna
+		let piennaDiff = Math.floor(piennaDate / (1000 * 60 * 60 * 24));
+		let pienna = piennaDiff - today;
+
+		//anniversary
+		let annivDiff = Math.floor(annivDate / (1000 * 60 * 60 * 24));
+		let anniv = annivDiff - today;
+
+		//birthday
+		let birthDiff = Math.floor(birthDate / (1000 * 60 * 60 * 24));
+		let birth = birthDiff - today;
 
 		// display
 		document.getElementById("debut").innerHTML=debut;
