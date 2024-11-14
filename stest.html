@@ -81,7 +81,13 @@
 		let anniv = today - annivDiff;
 
 		//birthday
-		let birth = today - birthDiff;
+		let a = today - birthDiff;
+		if(a != 0) {
+			let birth = today - birthDiff;
+		}
+		else {
+			birth = "D-day"
+		}
 
 		// display
 		document.getElementById("debut").innerHTML=debut;
