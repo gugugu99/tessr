@@ -57,14 +57,15 @@
 	//Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec
 	const debutDate = new Date('Jun 11, 2023 16:00:00');
 	const piennaDate = new Date('Jan 29, 2024 21:00:00');
-	const annivDate = new Date('Jun 11, 2025 00:00:01');
-	const birthDate = new Date('Oct 01, 2025 23:59:59');
+	const annivDate = new Date('Jun 11, 2025 00:00:00');
+	const birthDate = new Date('Oct 01, 2025 20:10:00');
 	
 	// countdown
 	let dDay = setInterval(function() {
 		// get today's date
-		const today = new Date().getTime();
-
+		const now = new Date().getTime();
+		let today = Math.floor(now / (1000 * 60 * 60 * 24));
+		
 		//debut
 		let debutDiff = Math.floor(debutDate / (1000 * 60 * 60 * 24));
 		let debut = today - debutDiff;
