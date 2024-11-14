@@ -17,7 +17,7 @@
 
 		.widgets {
 			display: inline-block;
-			width: 160px;
+			width: 180px;
 			margin-bottom: 7px;
 			padding: 20px;
 			border-radius: 5px;
@@ -54,32 +54,39 @@
 </body>
 
 <script>
+	const days = 1000 * 60 * 60 * 24;
 	//Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec
-	const debutDate = new Date('Jun 11, 2023 00:00:00'); //16:00:00
-	const piennaDate = new Date('Jan 29, 2024 00:00:00'); //21:00:00
-	const annivDate = new Date('Jun 11, 2005 00:00:00');
-	const birthDate = new Date('Oct 01, 2025 00:00:00');
-	//
-	const debutDiff = Math.floor(debutDate / (1000 * 60 * 60 * 24));
-	const piennaDiff = Math.floor(piennaDate / (1000 * 60 * 60 * 24));
-	const annivDiff = Math.floor(annivDate / (1000 * 60 * 60 * 24));
-	const birthDiff = Math.floor(birthDate / (1000 * 60 * 60 * 24));
+	const debutDate = new Date('Jun 11, 2023 00:00:01'); //16:00:00
+	const piennaDate = new Date('Jan 29, 2024 00:00:01'); //21:00:00
+	const annivDate = new Date('Jun 11, 2005 00:00:01');
+	const birthDate = new Date('Oct 01, 2025 00:00:01');
+
 	// countdown
 	let dDay = setInterval(function() {
 		// get today's date
-		const now = new Date().getTime();
-		const today = Math.floor((now / (1000 * 60 * 60 * 24))-1);
+		const today = new Date().getTime();
+
+		// get the difference
+		const debutDiff = today - debutDate + days;
+		const piennaDiff = today - piennaDate + days;
+		const annivDiff = today - annivDate + days;
+		const birthDiff = today - birthDate + days;
+
+		// math
+		let debutIf = Math.floor(debutDiff / days);
+		let debutIf = Math.floor(piennaDiff / days);
+		let debutIf = Math.floor(annivDiff / days);
+		let debutIf = Math.floor(birthDiff / days);
+
 		//debut
-		let debutIf = today - debutDiff;
 		let debut = 'D' + debutIf;
 		if(debutIf > 0) {
 			debut = 'D+' + debutIf;
-		}
+		} 
 		else if(debutIf == 0) {
 			debut = 'D-day';
 		}
 		//pienna
-		let piennaIf = today - piennaDiff;
 		let pienna = 'D' + piennaIf;
 		if(piennaIf > 0) {
 			pienna = 'D+' + piennaIf;
@@ -88,7 +95,6 @@
 			pienna = 'D-day';
 		}
 		//anniversary
-		let annivIf = today - annivDiff;
 		let anniv = 'D' + annivIf;
 		if(annivIf > 0) {
 			anniv = 'D+' + annivIf;
@@ -97,7 +103,6 @@
 			anniv = 'D-day';
 		}
 		//birthday
-		let birthIf = today - birthDiff;
 		let birth = 'D' + birthIf;
 		if(birthIf > 0) {
 			birth = 'D+' + birthIf;
@@ -105,6 +110,7 @@
 		else if(birthIf == 0) {
 			birth = 'D-day';
 		}
+
 		// display
 		document.getElementById("debut").innerHTML=debut;
 		document.getElementById("pienna").innerHTML=pienna;
