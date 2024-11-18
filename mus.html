@@ -320,8 +320,8 @@ body {
 	
 <body>
 	<!--insert the html code from the codepen here-->
-	HTML CSS JSResult Skip Results Iframe
-EDIT ON
+	<!--HTML CSS JSResult Skip Results Iframe-->
+<!--EDIT ON-->
 <!-- Tracks used in this music/audio player application are free to use. I downloaded them from Soundcloud and NCS websites. I am not the owner of these tracks. -->
 
 <div id="app-cover">
@@ -343,7 +343,7 @@ EDIT ON
     </div>
     <div id="player-content">
       <div id="album-art">
-        <img src="https://gugugu99.github.io/tessr/album.jpg" class="active" id="_1">
+        <img src="https://raw.githubusercontent.com/gugugu99/tessr/main/album.jpg">
         <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_2.jpg" id="_2">
         <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_3.jpg" id="_3">
         <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_4.jpg" id="_4">
@@ -406,14 +406,14 @@ EDIT ON
     buffInterval = null,
     tFlag = false,
     albums = [
-      "Festa!",
+      "Dawn",
       "Me & You",
       "Electro Boy",
       "Home",
       "Proxy (Original Mix)"
     ],
     trackNames = [
-      "Akane Lize",
+      "Skylike - Dawn",
       "Alex Skrindo - Me & You",
       "Kaaze - Electro Boy",
       "Jordan Schor - Home",
@@ -439,8 +439,8 @@ EDIT ON
         checkBuffering();
         i.attr("class", "fas fa-pause");
         audio.play();
-	audio.addEventListener('ended', function() {
-	document.getElementById("play-next").click();
+	//audio.addEventListener('ended', function() {
+	//document.getElementById("play-next").click();
 }, false);
       } else {
         playerTrack.removeClass("active");
