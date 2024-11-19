@@ -37,14 +37,14 @@
 		<!--리제 데뷔-->
 		<div class="d-day">
 			<div id="debut" class="numbers "> </div>
-			debut
+			lise's debut
 		</div>
 		<!--피엔나 된 날-->
 		<div class="d-day">
 			<div id="pienna" class="numbers"> </div>
 			pienna
 		</div>
-		<!--데뷔 기념일-->
+		<!--리제 데뷔 기념일-->
 		<div class="d-day">
 			<div id="anniv" class="numbers"> </div>
 			anniversary
@@ -52,16 +52,17 @@
 		<!--리제 생일-->
 		<div class="d-day">
 			<div id="birth" class="numbers"> </div>
-			birthday
+			lise's birthday
 		</div>
 	</div>
-	
+</body>
+
 <script>
 	//Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec
-	const debutDate = new Date('Jun 11, 2023 00:00:00'); //16:00:00
-	const piennaDate = new Date('Jan 29, 2024 00:00:00');
-	const annivDate = new Date('Jun 11, 2025 00:00:00');
-	const birthDate = new Date('Nov 19, 2024 00:00:00');
+	const debutDate = new Date('Jun 11, 2023 00:00:00'); //리제 데뷔일
+	const piennaDate = new Date('Jan 29, 2024 00:00:00'); //피엔나 된 날
+	const annivDate = new Date('Jun 11, 2025 00:00:00'); //리제 데뷔 기념일
+	const birthDate = new Date('Oct 01, 2025 00:00:00'); //리제 생일
 
 	const days = 1000 * 60 * 60 * 24;
 	// countdown
@@ -121,5 +122,4 @@
 		document.getElementById("birth").innerHTML=birth;
 	}, 1);
 </script>
-</body>
 </html>
