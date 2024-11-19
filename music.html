@@ -7,10 +7,12 @@
 	<!--link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.3.1/css/all.css'><link rel="stylesheet" href="./style.css"-->
 	<title>Document</title>
 	<style>
-		/* */
+		*:focus{
+			outline: none;
+		}
 	</style>
 </head>
-	
+
 <body>
 	<div id="app-cover">
 		<div id="bg-artwork"></div>
@@ -29,7 +31,6 @@
 					<div id="seek-bar"></div>
 				</div>
 			</div>
-
 			<div id="player-content">
 				<div id="album-art">
 					<img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_1.jpg" class="active" id="_1">
@@ -39,7 +40,6 @@
 					<img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_5.jpg" id="_5">
 					<div id="buffer-box">Buffering ...</div>
 				</div>
-
 				<div id="player-controls">
 					<div class="control">
 						<div class="button" id="play-previous">
@@ -60,7 +60,6 @@
 			</div>
 		</div>
 	</div>
-
 	
 	<!--script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script-->
 	<script>
