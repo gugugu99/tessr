@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:900">
-	<title>Document</title>
+	<title>지니다제의 D-DAY</title>
 	<style>
-		#d-day {
-			color: #eeee00;
+		#widgets {
+			color: #ffffff;
 			font-family: 'Lato', sans-serif;
 			font-size: .7em;
 			text-align: center;
@@ -15,7 +15,7 @@
 			letter-spacing: 5px;
 		}
 
-		.widgets {
+		.d-day {
 			display: inline-block;
 			width: 15.4em;
 			margin-bottom: 7px;
@@ -33,31 +33,36 @@
 </head>
 
 <body>
-	<div id="d-day">
-		<div class="widgets">
+	<div id="widgets">
+		<!--리제 데뷔-->
+		<div class="d-day">
 			<div id="debut" class="numbers "> </div>
 			debut
 		</div>
-		<div class="widgets">
+		<!--피엔나 된 날-->
+		<div class="d-day">
 			<div id="pienna" class="numbers"> </div>
 			pienna
 		</div>
-		<div class="widgets">
+		<!--데뷔 기념일-->
+		<div class="d-day">
 			<div id="anniv" class="numbers"> </div>
 			anniversary
 		</div>
-		<div class="widgets">
+		<!--리제 생일-->
+		<div class="d-day">
 			<div id="birth" class="numbers"> </div>
 			lise's birthday
 		</div>
 	</div>
+</body>
 
-	<script>
+<script>
 	//Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec
 	const debutDate = new Date('Jun 11, 2023 00:00:00'); //16:00:00
 	const piennaDate = new Date('Jan 29, 2024 00:00:00');
-	const annivDate = new Date('Jun 11, 2005 00:00:00');
-	const birthDate = new Date('Nov 16, 2024 00:00:00');
+	const annivDate = new Date('Jun 11, 2025 00:00:00');
+	const birthDate = new Date('Oct 01, 2025 00:00:00');
 
 	const days = 1000 * 60 * 60 * 24;
 	// countdown
@@ -117,7 +122,4 @@
 		document.getElementById("birth").innerHTML=birth;
 	}, 1);
 </script>
-</body>
-
-
 </html>
