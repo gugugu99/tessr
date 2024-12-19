@@ -10,13 +10,28 @@
 		*:focus {
 			outline: none;
 		}
+		
 		#player-controls {
+			overflow: hidden;
+			float: right;
 			width: 250px;
 			height: 100%;
-			margin: 0 5px 0 141px;
-			float: right;
-			overflow: hidden;
-			background-color: #ffff00;
+			margin: 0 5px 0 141px;		
+		}
+
+		.control {
+			float: left;
+			width: 33.333%;
+			padding: 12px 0;
+		}
+
+		.button {
+			width: 26px;
+			height: 26px;
+			padding: 25px;
+			boder-radius: 6px;
+			background-color: #fff;
+			cursor: pointer;
 		}
 	</style>
 </head>
